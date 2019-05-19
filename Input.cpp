@@ -23,4 +23,12 @@ void Engine::input() {
 			}
 		}
 	}
+
+	if (mThomas.handleInput()) {
+		// Play input sound for Thomas
+	}
+
+	if (mBob.handleInput()) {
+		// Play sound for Bob
+	}
 }

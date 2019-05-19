@@ -10,16 +10,25 @@ void Engine::draw() {
 		mRenderWindow.draw(mSpriteBackground);
 		// Switch to main view
 		mRenderWindow.setView(mMainView);
+
+		mRenderWindow.draw(mThomas.getSprite());
+		mRenderWindow.draw(mBob.getSprite());
 	} else {
 		// Split screen active
 		// Draw Thomas's side
 		mRenderWindow.setView(mBGLeftView);
 		mRenderWindow.draw(mSpriteBackground);
 		mRenderWindow.setView(mLeftView);
+		
+		mRenderWindow.draw(mBob.getSprite());
+		mRenderWindow.draw(mThomas.getSprite());
 		// DRaw Bob's side
 		mRenderWindow.setView(mBGRightView);
 		mRenderWindow.draw(mSpriteBackground);
 		mRenderWindow.setView(mRightView);
+
+		mRenderWindow.draw(mThomas.getSprite());
+		mRenderWindow.draw(mBob.getSprite());
 	}
 
 	mRenderWindow.setView(mHUDView);

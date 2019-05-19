@@ -1,12 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "TextureHolder.h"
+#include "Thomas.h"
+#include "Bob.h"
 
 using namespace sf;
 
 class Engine {
 private:
 	TextureHolder mTextureHolder;
+	// Player variables
+	Thomas mThomas;
+	Bob mBob;
+
 	const int TILE_SIZE = 50;
 	const int VERTS_IN_QUAD = 4;
 	// Force of gravity

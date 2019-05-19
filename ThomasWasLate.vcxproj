@@ -156,9 +156,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\ZombieArena\TextureHolder.cpp" />
+    <ClCompile Include="Bob.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="PlayableCharacter.cpp" />
+    <ClCompile Include="Thomas.cpp" />
     <ClCompile Include="ThomasWasLate.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -168,8 +171,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ZombieArena\TextureHolder.h" />
+    <ClInclude Include="Bob.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="PlayableCharacter.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Thomas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
