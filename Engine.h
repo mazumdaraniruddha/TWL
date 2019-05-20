@@ -3,6 +3,7 @@
 #include "TextureHolder.h"
 #include "Thomas.h"
 #include "Bob.h"
+#include "LevelManager.h"
 
 using namespace sf;
 
@@ -12,6 +13,8 @@ private:
 	// Player variables
 	Thomas mThomas;
 	Bob mBob;
+	// The level manager
+	LevelManager mLevelManager;
 
 	const int TILE_SIZE = 50;
 	const int VERTS_IN_QUAD = 4;
@@ -42,10 +45,19 @@ private:
 	float mTimeRemaining = 10;
 	Time mGameTimeTotal;
 	bool mNewLevelRequired = true;
+	// Vertext Array for Level tiles
+	VertexArray mVALevel;
+	// 2D array map for the level
+	int** mArrayLevel = NULL;
+	// Texture for the level tiles
+	Texture mTextureTiles;
 	// PRIVATE FUNCTIONS FOR UPDATING THE GAME
 	void input();
 	void update(float dtAsSeconds);
 	void draw();
+	// Load new level
+	void loadLevel();
+
 public:
 	Engine();
 	void run();

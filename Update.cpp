@@ -5,11 +5,7 @@
 
 void Engine::update(float dtAsSeconds) {
 	if (mNewLevelRequired) {
-		mThomas.spawn(Vector2f(0, 0), GRAVITY);
-		mBob.spawn(Vector2f(100, 0), GRAVITY);
-		// Make sure spawn is only called once
-		mTimeRemaining = 10;
-		mNewLevelRequired = false;
+		loadLevel();
 	}
 
 	if (mIsPlaying) {

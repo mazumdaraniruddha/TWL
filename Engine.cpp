@@ -17,6 +17,7 @@ Engine::Engine() {
 	mBGRightView.setViewport(FloatRect(0.5f, 0.001f, 0.499f, 0.998f));
 	mTextureBackground = TextureHolder::GetTexture("graphics/background.png");
 	mSpriteBackground.setTexture(mTextureBackground);
+	mTextureTiles = TextureHolder::GetTexture("graphics/tiles_sheet.png");
 }
 
 void Engine::run() {

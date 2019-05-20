@@ -11,6 +11,8 @@ void Engine::draw() {
 		// Switch to main view
 		mRenderWindow.setView(mMainView);
 
+		mRenderWindow.draw(mVALevel, &mTextureTiles);
+
 		mRenderWindow.draw(mThomas.getSprite());
 		mRenderWindow.draw(mBob.getSprite());
 	} else {
@@ -20,12 +22,16 @@ void Engine::draw() {
 		mRenderWindow.draw(mSpriteBackground);
 		mRenderWindow.setView(mLeftView);
 		
+		mRenderWindow.draw(mVALevel, &mTextureTiles);
+
 		mRenderWindow.draw(mBob.getSprite());
 		mRenderWindow.draw(mThomas.getSprite());
 		// DRaw Bob's side
 		mRenderWindow.setView(mBGRightView);
 		mRenderWindow.draw(mSpriteBackground);
 		mRenderWindow.setView(mRightView);
+
+		mRenderWindow.draw(mVALevel, &mTextureTiles);
 
 		mRenderWindow.draw(mThomas.getSprite());
 		mRenderWindow.draw(mBob.getSprite());
